@@ -43,3 +43,22 @@ void readbmp(char* filename, uchar* array) {
 	}
 	fclose(img); //close the file
 }
+
+
+void invert(uchar *image, int size){
+
+	for (int i; i < size; ++i)
+	{
+		// I have not used .bmp before so i assume the rgb values can be used here as 256 bit colors.
+		image[i] = 255 - image[i]; 
+	}
+}
+
+void zero(uchar *image, int size){
+
+	for (int i; i < size; ++i)
+	{
+		// I have not used .bmp before so i assume the rgb values can be used here as 256 bit colors.
+		image[i] = 0; 
+	}
+}
